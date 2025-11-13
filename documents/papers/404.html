@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="en">
+  <!-- Page redirecting all old paths-->
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex">
+
+  <script>
+    (function () {
+      var path = window.location.pathname;
+
+      // Add all your redirects here
+      var redirects = {
+        "/documents/idn_secondary_expansion.pdf": "/documents/papers/idn_secondary_expansion.pdf",
+        
+        "/documents/cesarlgm_rooted_intext.pdf": "/documents/papers/garromarin_opportunity.pdf",
+
+        "/documents/cesarlgm_rooted_offtext.pdf": "/documents/papers/cesarlgm_rooted_offtext.pdf",
+
+        "/documents/garromarin_opportunity.pdf": "/documents/papers/garromarin_opportunity.pdf",
+      };
+
+      if (redirects[path]) {
+        // Redirect to the updated location
+        window.location.replace(redirects[path]);
+      } else {
+        // Not in the redirect list → show your custom 404 page
+        window.location.replace("https://www.cesargarromarin.com/404.html");
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <p>If you’re not redirected automatically, 
+    <a id="fallback" href="https://www.cesargarromarin.com/research/">click here</a>.
+  </p>
+</body>
+</html>
